@@ -42,7 +42,7 @@
     app.appendChild(h('h1', { text: 'You scored' }));
     app.appendChild(h('div', { class: 'big-score', text: score + ' / 5' }));
     app.appendChild(h('p', { class: 'lead', text: msg }));
-    app.appendChild(h('div', { class: 'note' }, [h('b', { text: 'Want the full game? ' }), 'It has 150 checked questions and four ways to play: Quiz Night on the Telly, Head to Head, Challenge a Mate and the Family League. You will find its code in the book, straight after Part 1.']));
+    app.appendChild(h('div', { class: 'note' }, [h('b', { text: 'Want the full game? ' }), 'It has ' + (window.QCOUNT || 'thousands of') + ' checked questions and four ways to play: Quiz Night on the Telly, Head to Head, Challenge a Mate and the Family League. You will find its code in the book, straight after Part 1.']));
     app.appendChild(h('div', { class: 'row' }, [h('button', { class: 'btn ghost', text: 'Play the Taster again', onclick: function () { n = 0; score = 0; show(); } })]));
   }
   intro();

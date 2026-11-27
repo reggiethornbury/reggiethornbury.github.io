@@ -134,3 +134,24 @@ body.telly .btn{font-size:clamp(17px,1.5vw,28px);padding:clamp(12px,1.1vw,20px) 
 body.telly .btn.small{font-size:clamp(15px,1.2vw,22px)}
 body.telly .btn.alt{background:var(--gold);color:var(--navy)}
 body.telly .btn.alt:disabled{opacity:.7}
+/* ---------- v2: pickers, speed clocks, challenge clock ---------- */
+.seg .other{display:inline-flex;align-items:center;gap:6px;font-weight:700}
+.seg input.mins{width:96px;font:inherit;font-weight:700;font-size:16px;padding:8px 10px;border:2px solid var(--ink);border-radius:999px;min-height:44px;background:#fff}
+.modebox{margin-top:6px}
+.hint{margin:14px 0 0;color:#c8d0dc;font-size:clamp(15px,1.6vw,24px)}
+.endtitle{text-align:center;color:#fff}
+.rest{text-align:center;color:#c8d0dc}
+.chclock{font-weight:800;color:var(--navy);font-variant-numeric:tabular-nums;background:#fff3d6;border:2px solid var(--gold);border-radius:999px;padding:3px 12px}
+.chclock.low{background:var(--red);border-color:var(--red);color:#fff;animation:flash .5s steps(1) infinite}
+.vs .p .tm{display:block;margin-top:6px;color:var(--muted);font-weight:700;font-size:15px}
+body.speed .half{justify-content:flex-start;gap:6px}
+body.speed .half.active{box-shadow:inset 0 0 0 5px var(--gold)}
+.bigclock{font-weight:900;font-size:clamp(40px,9vh,96px);line-height:1;text-align:center;font-variant-numeric:tabular-nums;color:#fff;opacity:.55;letter-spacing:.02em}
+.bigclock.run{opacity:1;color:var(--gold)}
+.bigclock.low{color:#fff;background:var(--red);border-radius:12px;opacity:1;animation:flash .5s steps(1) infinite}
+.bigclock.zero{opacity:.35;color:#fff;background:none;animation:none}
+.sbody{flex:1;display:flex;flex-direction:column;gap:8px;min-height:0}
+.waiting{margin:auto;font-weight:800;font-size:clamp(16px,2.6vh,26px);opacity:.75}
+@keyframes flash{50%{background:#ff6b5e;color:#fff}}
+@media (prefers-reduced-motion: reduce){.bigclock.low,.chclock.low{animation:none}}
+@media (max-width:560px){table.league th,table.league td{padding:9px 5px;font-size:15px}table.league th{font-size:11px;letter-spacing:0}table.league td:nth-child(2){word-break:normal}}
